@@ -1,0 +1,38 @@
+<html>
+
+    <head>
+        
+        <title>Creating the Solution</title>
+    
+        <style>
+        
+            body {
+                background-color: aliceblue
+            }
+        
+        </style>
+        
+    </head>
+
+    <body>
+        <select id="myselect">
+            <option value="1">1</option>
+        </select>
+    </body>
+    
+    <script src="RD-Data.json"></script>
+    
+    <script>
+    
+        i=0;
+        str="<option value='1'>Select a Country</option>"
+        while(i<data.length){
+            var v=data[i].dims.COUNTRY;
+            str=str+ "<option value=" + v + ">" + v + "</option>"
+            i=i+2;
+        }
+    document.getElementById("myselect").innerHTML=str
+    
+    </script>
+    
+</html>
